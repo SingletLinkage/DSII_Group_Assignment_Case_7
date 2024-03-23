@@ -11,14 +11,15 @@
 - Ayuj Aryan B23198
 - Pranab Ray B23169
 
-## Instructions: 
-- Each team can have a maximum of 6 member.
-- Give the team details by filling this form by 20th March 2024. Designate one team member as the team leader. The team leader will play a crucial role in coordinating efforts and ensuring timely submission.
-- Each team would do only one submission. The submission would be done by team leader after compiling all the data.
-- While each team will be assigned a specific case study, feel free to explore other case studies for a deeper understanding of analysis and representation of results.
-- Use the provided LaTeX format exclusively for writing your report. Submission in any other format would not be accepted.
-- The minimum expectation from each group is to reproduce the report, including data and results, in a well-formatted manner. Additionally, strive to bring fresh insights to the analysis.
+## Instruction Highlights: 
+
+- One submission per group - done by leader.
+
+- Use provided LaTeX format.
+  
+- Minimum expectation - reproduce the report, including data and results, in a well-formatted manner. Additionally, strive to bring fresh insights to the analysis.
 - You can utilize basic descriptive statistics discussed in class, as well as other statistical analysis tools/methods to enhance your analysis.
+  
 - There are various ways to improve the quality of your work and potentially earn bonus marks, such as:
 
     - Adding more statistics, graphs, and analysis to enrich the report.
@@ -27,6 +28,8 @@
     - Creating a completely new report using publicly available data from various sources. e.g.
 
 - AI tools can be used to add a final touch to your work, but you MUST put in substantial effort yourself. You can use generative AI tools to improve language/correct grammar or to create scripts for data analysis, as well as data visualization tools for storytelling.
+
+## Final Submission:
 - Your final submission should be a .zip folder containing:
 
     - All LaTeX source files.
@@ -36,7 +39,10 @@
     - Soft copies of any additional documents or reports used in the study.
 
 - At the end of your report, include a declaration in tabular form detailing each team member's contributions, analysis, and use of resources to ensure acknowledges each member's effort.
-- Also add the details of the addition work done as described in point 7 above on the last page of the report.
+- Also add the details of the addition work done as described in point 7 (descriptve stats) above on the last page of the report.
+
+- TABLE:  
+  ![img](./images/Submission_Table_Template.png)
 
 
 ## Links Provided:
