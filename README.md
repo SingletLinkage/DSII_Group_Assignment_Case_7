@@ -3,6 +3,14 @@
 
 ### Deadline : March 27, 2024 
 
+## Members:
+
+- Kunal Sharma B23079
+- Arani Ghosh B23119
+- Arka Mukhopadhyay B23120
+- Ayuj Aryan B23198
+- Pranab Ray B23169
+
 ## Instructions: 
 - Each team can have a maximum of 6 member.
 - Give the team details by filling this form by 20th March 2024. Designate one team member as the team leader. The team leader will play a crucial role in coordinating efforts and ensuring timely submission.
