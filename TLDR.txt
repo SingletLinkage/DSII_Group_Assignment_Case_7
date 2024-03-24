@@ -23,3 +23,18 @@ First, seeing the population :
 2.  Next we can sort by brand. Find the percentage of
     products by brand and also cumulative. We can do this by seeing how many products of each brand are present.
 
+Now that we have the normalized data (by percentage), we can analyse it further.
+Explaining the data : finding the mean, median, nmode, std. deviation, quartile
+
+WE can create a bar chart, histogram and/or pie chart to explain the data.
+Example : to show distribution by brands, we can use a pie chart and bar chart for distribution by type.
+
+now we find mean, median, mode etc of 
+i) number of shades
+ii) price of products
+
+we can also create a distribution whidch shows the percentage of products by number of shades and also price.
+then we can create a histogram to organize this. We will get some outliers and graphs like the ones in pg 140 of the pdf.  
+
+Now using this, we can make a boxplot - which is basically classifying data into different quantiles. We
+will find some outliers and in case we choose to ignore these, our inferences will change. We might want to ignore them because we want to get an idea of the general population of products.
