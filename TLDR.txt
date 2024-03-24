@@ -6,3 +6,20 @@ Goals :
 
 Primary data - data collected firsthand by a researcher through surveys etc 
 Secondary data - Data collected beforehand that si freely available and can be used to draw inferences.
+We are going to use the secondary data provided for analysis.
+
+
+Raw data is difficult to read so we have sampled data in data_indonesia.csv which gives us an overall idea of the data. 
+Here we have the products with their type and price and we also have information about the number of shades available.
+
+The data used here is nominal data because there is no particular order and it is grouped according to certain parameters.
+
+
+Now we group the data and analyse it:
+
+First, seeing the population :
+1.  The kind of lip product - crayon, liquid, solid or stick 
+    we find the percentage of the total comprised by the products of each type and make a bar graph. This tells us what kind of lip products are commonly used. We can add a column for cumulative percent to show that all the data is present.
+2.  Next we can sort by brand. Find the percentage of
+    products by brand and also cumulative. We can do this by seeing how many products of each brand are present.
+
