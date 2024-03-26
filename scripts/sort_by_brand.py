@@ -4,7 +4,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 data=pd.read_csv('source_files\data_indonesia.csv')
+print("Percentage by brand")
 print(data['Brand'].value_counts(normalize=True))
+prnt()
+print("Cumulative: ")
 print(data['Brand'].value_counts(normalize=True).cumsum())
 data['Brand'].value_counts().plot(kind='bar') 
 plt.show()
