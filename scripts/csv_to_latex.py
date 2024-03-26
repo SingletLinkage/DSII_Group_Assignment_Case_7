@@ -1,6 +1,6 @@
 import csv
 
-reader = csv.reader(open('source_files/data_indonesia.csv', 'r'), delimiter=',')
+reader = csv.reader(open('source_files/actual_data_indonesia.csv', 'r'), delimiter=',')
 header = next(reader)
 
 latex_str = '''
@@ -21,5 +21,5 @@ for row in reader:
 
 latex_str += '\\end{tabular}\n\\end{table}\n\\restoregeometry'
 
-with open('scripts/table.tex', 'w') as f:
+with open('latex_files/table.tex', 'w') as f:
     f.write(latex_str)
