@@ -26,7 +26,7 @@
     - Incorporating additional or recent data to enhance the analysis.
     - Conducting analysis inspired by the assigned case study but using data from a different country/domain.
     - Creating a completely new report using publicly available data from various sources. e.g.
-  
+
 - AI tools can be used to add a final touch to your work, but you MUST put in substantial effort yourself. You can use generative AI tools to improve language/correct grammar or to create scripts for data analysis, as well as data visualization tools for storytelling.
 
 ## Final Submission:
