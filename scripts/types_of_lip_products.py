@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-data = pd.read_csv("source_files\\random_database.csv")
+data = pd.read_csv("source_files\\actual_data_indonesia.csv")
 print(data)
 
 types = {}
