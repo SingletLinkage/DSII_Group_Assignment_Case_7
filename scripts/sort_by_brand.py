@@ -3,7 +3,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-data=pd.read_csv('source_files\\random_database.csv')
+data=pd.read_csv('source_files\\actual_data_indonesia.csv')
 print("Percentage by brand")
 print(data['Brand'].value_counts(normalize=True))
 print()
