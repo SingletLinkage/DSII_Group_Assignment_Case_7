@@ -8,6 +8,7 @@
 \usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{adjustbox}
+\usepackage{makecell}
 \usepackage[
     a4paper,
     total={5in, 7in}
@@ -229,7 +230,7 @@
             Stratified sampling method is used to determine the sample in this research by dividing the population into subgroups based on the factors like brands, type, products, etc. 
 
         \subsection{Data Analysis}
-
+    
     \section{Raw Data}
     Here's the table that would be used for this study:
     \include{table_raw}
@@ -244,5 +245,9 @@
 	\newpage
 	\bibliographystyle{unsrt}
 	\bibliography{references}
+    \addcontentsline{toc}{section}{\refname}
+
+    \newpage
+    \include{contri_table}
 	
 \end{document}
