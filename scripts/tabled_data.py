@@ -46,11 +46,11 @@ stats.columns = ['Price', 'Shades']
 
 fig, ax = plt.subplots(figsize=(12, 6))
 ax.axis('off')
-ax.set_title('Descriptive Statistics')  # Set the title
+ax.set_title('Descriptive Statistics',weight='bold')  # Set the title
 table = ax.table(cellText=stats.values, colLabels=stats.columns, rowLabels=stats.index, cellLoc='center', loc='center')
 table.auto_set_font_size(False)
 table.set_fontsize(13)
-table.scale(0.9, 1.8)
+table.scale(0.8, 1.8)
 
 # Access all cells
 cells = table.get_celld()
@@ -66,5 +66,4 @@ for i in range(1,12):
 cells[0, 0].set_text_props(weight='bold')
 cells[0, 1].set_text_props(weight='bold')
 plt.show()
-
-
+# Now we have a table with descriptive statistics for Price and Shades. We can see the number of observations, mean, median, mode, standard deviation, variance, minimum, maximum, and percentiles for both Price and Shades.
