@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.style as style
 
 # Setting the style
-style.use('seaborn-v0_8-dark-palette')
+style.use('Solarize_Light2')
 
 data = pd.read_csv('source_files\\actual_data_indonesia.csv')
 
