@@ -21,6 +21,7 @@ plt.grid(True)
 plt.show()
 
 data['Price'] = data['Price'].str.replace(',', '').astype(float)
+# this is to remove commas from the price values so that we can use the price effectively in our visualization and calculations
 
 # Plot box plot with color and percentiles
 plt.figure(figsize=(8, 6))
