@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import seaborn as sns  # Import seaborn for KDE
 
 # Importing matplotlib themes
-import matplotlib.pyplot as plt
 import matplotlib.style as style
 
 # Setting the style
@@ -11,8 +11,9 @@ style.use('Solarize_Light2')
 
 data = pd.read_csv('source_files\\actual_data_indonesia.csv')
 
+# Plot histogram with KDE line
 plt.figure(figsize=(10, 6))
-plt.hist(data['Price'], bins=30, color='skyblue', edgecolor='black')
+sns.histplot(data['Price'], bins=30, color='skyblue', edgecolor='black', kde=True)  # Use seaborn histplot with KDE
 plt.title('Histogram of Lip Product Prices')
 plt.xlabel('Price')
 plt.xticks(rotation=90)
