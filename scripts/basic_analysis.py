@@ -11,9 +11,10 @@ style.use('Solarize_Light2')
 
 data = pd.read_csv('source_files\\actual_data_indonesia.csv')
 
-# Plot histogram with KDE line
+# Plot histogram with KDE line (black)
 plt.figure(figsize=(10, 6))
-sns.histplot(data['Price'], bins=30, color='skyblue', edgecolor='black', kde=True)  # Use seaborn histplot with KDE
+ax = sns.histplot(data['Price'], bins=30, color='skyblue', edgecolor='black', kde=True)  # KDE line in black
+ax.lines[0].set_color('crimson')
 plt.title('Histogram of Lip Product Prices')
 plt.xlabel('Price')
 plt.xticks(rotation=90)
