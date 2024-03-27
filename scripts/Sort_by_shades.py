@@ -18,10 +18,17 @@ data=pd.read_csv('source_files\\actual_data_indonesia.csv')
 shade_counts = data['Shades'].value_counts()
 
 
-
+x = shade_counts.index
+y = shade_counts.values
+coefficients = np.polyfit(x, y, 2)  # Use a degree of 2 for a curve
+polynomial = np.poly1d(coefficients)
+ys = polynomial(x)
 
 plt.figure(figsize=(10, 6))
 plt.barh(shade_counts.index, shade_counts.values, color='aqua', edgecolor='black')
+x_smooth = np.linspace(x.min(), x.max(), 500)  # Change 500 to the number of points you want
+ys_smooth = polynomial(x_smooth)
+plt.plot(ys_smooth, x_smooth, color='red')# Add the curve
 plt.title('Bar Plot of Lip Product Shades')
 plt.xlabel('Frequency')
 plt.ylabel('Shades')
