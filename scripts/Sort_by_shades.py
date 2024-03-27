@@ -4,6 +4,10 @@ Now using this, we can make a boxplot - which is basically classifying data into
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import matplotlib.style as style
+
+# Setting the style
+style.use('Solarize_Light2')
 
 # Load data
 data=pd.read_csv('source_files\\actual_data_indonesia.csv')
@@ -12,7 +16,7 @@ data=pd.read_csv('source_files\\actual_data_indonesia.csv')
 shade_counts = data['Shades'].value_counts()
 
 plt.figure(figsize=(10, 6))
-plt.barh(shade_counts.index, shade_counts.values, color='skyblue', edgecolor='black')
+plt.barh(shade_counts.index, shade_counts.values, color='aqua', edgecolor='black')
 plt.title('Bar Plot of Lip Product Shades')
 plt.xlabel('Frequency')
 plt.ylabel('Shades')
