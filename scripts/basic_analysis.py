@@ -1,8 +1,16 @@
-
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-data=pd.read_csv('source_files\\actual_data_indonesia.csv')
+
+# Importing matplotlib themes
+import matplotlib.pyplot as plt
+import matplotlib.style as style
+
+# Setting the style
+style.use('Solarize_Light2')
+
+data = pd.read_csv('source_files\\actual_data_indonesia.csv')
+
 plt.figure(figsize=(10, 6))
 plt.hist(data['Price'], bins=30, color='skyblue', edgecolor='black')
 plt.title('Histogram of Lip Product Prices')
@@ -12,20 +20,19 @@ plt.ylabel('Frequency')
 plt.grid(True)
 plt.show()
 
-
 data['Price'] = data['Price'].str.replace(',', '').astype(float)
+# this is to remove commas from the price values so that we can use the price effectively in our visualization and calculations
 
 # Plot box plot with color and percentiles
 plt.figure(figsize=(8, 6))
-plt.boxplot(data['Price'], vert=True, patch_artist=True, boxprops=dict(facecolor='skyblue'))  
-# Specify vert=True for vertical orientation, patch_artist=True for box color
+plt.boxplot(data['Price'], vert=True, patch_artist=True, boxprops=dict(facecolor='skyblue'))
 
 # Add horizontal lines for percentiles
 percentiles = [0, 10, 25, 50, 75, 90, 100]
 percentile_values = [data['Price'].quantile(p/100) for p in percentiles]
 colors = ['gray', 'red', 'orange', 'green', 'blue', 'purple', 'black']
 linestyles = ['--', '--', '--', '-', '--', '--', '--']
-labels = ['0th percentile', '10th percentile', '25th percentile', '50th percentile (median)', 
+labels = ['0th percentile', '10th percentile', '25th percentile', '50th percentile (median)',
           '75th percentile', '90th percentile', '100th percentile']
 
 for i in range(len(percentiles)):
