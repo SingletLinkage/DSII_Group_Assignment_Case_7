@@ -11,3 +11,5 @@ print("Cumulative: ")
 print(data['Brand'].value_counts(normalize=True, sort=False).cumsum())
 data['Brand'].value_counts(sort=False).plot(kind='bar') 
 plt.show()
+
+
