@@ -3,13 +3,13 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-data=pd.read_csv('source_files\\actual_data_indonesia.csv')
+data=pd.read_csv('source_files/actual_data_indonesia.csv')
 print("Percentage by brand")
-print(data['Brand'].value_counts(normalize=True))
+print(data['Brand'].value_counts(normalize=True, sort=False))
 print()
 print("Cumulative: ")
-print(data['Brand'].value_counts(normalize=True).cumsum())
-data['Brand'].value_counts().plot(kind='bar') 
+print(data['Brand'].value_counts(normalize=True, sort=False).cumsum())
+data['Brand'].value_counts(sort=False).plot(kind='bar') 
 plt.show()
 
 
