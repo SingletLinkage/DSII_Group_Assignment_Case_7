@@ -39,4 +39,4 @@ sm.set_array([])
 plt.colorbar(sm, label='Count of Shades')
 
 # Show the plot
-plt.savefig(os.path.join(os.getcwd(), 'images', 'TotalShadesByBrand.pdf'), dpi=800)
+plt.savefig(os.path.join(os.getcwd(), 'images', 'TotalShadesByBrand.pdf'))

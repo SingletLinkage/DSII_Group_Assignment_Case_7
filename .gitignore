@@ -1,0 +1,4 @@
+latex_files/*
+
+!*.tex
+!*.bib
