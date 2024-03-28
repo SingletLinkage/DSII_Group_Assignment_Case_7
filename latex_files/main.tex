@@ -5,7 +5,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{hyperref} % Load hyperref last
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{amsmath}
 \usepackage{adjustbox}
 \usepackage{makecell}
@@ -227,33 +227,29 @@ Sampling bias refers to the systematic error introduced into a sample as a resul
 \end{figure}
 \section{Methodology}
 \subsection{Data Collection}
-In our study, to minimize time spending, secondary data is used as the resources since there are millions of lip products in Indonesia.
+Considering the gigantic dataset pertaining to lip products in Indonesia, secondary data is used in our study in order to minimize time spent collecting the same otherwise. \\
 
-\noindent Stratified sampling method is used to determine the sample in this research by dividing the population into subgroups based on the factors like brands, type, products, etc.
+\noindent The initial data for this study was obtained from the sample of 50 lip products given in a prior report \cite{casestudy}. The data given was sourced from 2022 reports, and hence, outdated. We used latest datasets to update 2 parameters - number of shades available in the market and the price of the lipsticks. \\
+
+\noindent To find the latest and credible data, we have used the maximum retail price (MRP) of the product as mentioned on the company's official Indonesian Website. Note that there are some companies which don't have country specific websites (or don't have an operational official website at all). In such cases, we have used Lazada/Shoppee to collect the data. Why these websites? These two websites are leading e-commerce websites in southeast Asia and Taiwan and hence are most credible source that could have been used.
 
 \subsection{Data Analysis}
 
-In order to analyze the given data, libraries such as matplotlib, numpy, seaborn, and pandas were utilized, aiding in data importation and visualization.
-\\ \\
-\noindent Firstly, the composition of products in terms of the type of lip product was determined. Four essential types were identified: solid, crayon, stick, and liquid. The percentage of products belonging to these types was calculated and displayed on a pie chart, providing an overview of the overall composition.
-\\ \\
-\noindent Next, the number of products from each brand was examined using the 'Brand' column. Through the implementation of libraries, the count of products per brand was easily obtained. The data was then normalized, and the percentage of products from each brand was visualized on a bar plot.
-\\ \\
-\noindent Mean, median, mode, and quartiles were computed for both prices and the number of shades using the imported libraries and appropriate statistical methods. Additionally, prices and shades at different percentiles were displayed, offering a comprehensive understanding of the dataset.
-\\ \\
-\noindent For the price analysis, a histogram depicting the distribution of prices across the dataset was created. This histogram illustrated price ranges and the frequency of products falling within each range, facilitating the identification of cheap, affordable, and expensive products. Furthermore, a box plot was generated to display the quantiles of prices, aiding in the analysis of price distribution.
-\\ \\
-\noindent In the analysis of the number of shades, a bar graph was plotted to visualize the distribution of products based on the number of shades they offer. This allowed for the assessment of products with varying shade ranges, supplemented by a curve fit to demonstrate data variation.
-\\ \\
-\noindent Color mapping was applied, associating frequencies with colors, with lower frequencies represented in blue and higher frequencies in red. This color scheme facilitated the easy identification of frequency levels.
-\\ \\
-\noindent Lastly, the data was grouped by companies, and the total number of shades offered by each company was determined. By aggregating the shades of all products under each brand, insights into the shade diversity provided by different companies were obtained.
+This study utilizes stratified sampling to determine the sample by dividing the population into subgroups based on factors like brands and product types. Also, the data that is used in this study is nominal in nature since it has categories without necessarily implying mathematical order. Libraries such as matplotlib, numpy, seaborn, and pandas provide easy means to analyze and visualize datasets. \\
+
+\noindent The composition of lip products by type (solid, crayon, stick, and liquid) is examined, with details displayed on bar and donut charts. Brand distribution is analyzed using the 'Brand' column, showing the count and percentage of products per brand on a bar plot. \\
+
+\noindent Statistical measures such as mean, median, mode, and quartiles are calculated for prices and the number of shades. Price distribution is visualized through a histogram and box plot, aiding in identifying price ranges and distribution. A bar graph displays the distribution of products based on the number of shades they offer. \\
+
+\noindent Kernel Density Estimation (KDE) is used on histograms to create smooth curves representing the data distribution. This enhances visualization by revealing underlying patterns and providing a refined understanding of price and shade distribution across the dataset. \\
+
+\noindent Color mapping is applied to visualize frequency levels, with lower frequencies represented in blue and higher frequencies in red. Lastly, data is grouped by companies to determine the total number of shades offered by each company, providing insights into shade diversity among different brands.
 
 \newgeometry{left=1cm,right=1cm, top=2cm, bottom=2cm}
 \section{Raw Data}
 
 \begin{longtable}{ccccc} % Specify the column format here
-    \caption{Raw Data for Study (2023)} \label{tab:Table_Raw}                                                                            \\
+    \caption{Raw Data for Study (2023)} \label{tab:Table_Raw}                                                                     \\
     \hline
     \textbf{Lip Product}                    & \textbf{Brand}    & \textbf{Type of Lip Product} & \textbf{Shades} & \textbf{Price} \\ \hline
     \endfirsthead
@@ -430,25 +426,58 @@ In order to analyze the given data, libraries such as matplotlib, numpy, seaborn
 \end{longtable}
 \restoregeometry
 
-\section{Graphs}
+\newgeometry{top=3cm, bottom=3cm}
+\section{Graphs and Stats}
 \begin{center}
-    
+    \begin{longtable}{|>{\columncolor{gray!15}}l|l|l|} % Adjust the number of columns and alignment as needed
+        \caption{Descriptive Statistics of Shades and Prices} \label{tab:statistics} \\
+        \hline
+        \rowcolor{gray!50}
+        \textbf{Attribute}     & \textbf{Shades} & \textbf{Price}                    \\ \hline
+        \endfirsthead
+        \multicolumn{3}{c}%
+        {{\tablename\ \thetable{} -- Continued from previous page}}                  \\
+        \hline
+        \textbf{Attribute}     & \textbf{Shades} & \textbf{Price}                    \\ \hline
+        \endhead
+        \hline \multicolumn{3}{r}{{Continued on next page}}                          \\ \hline
+        \endfoot
+        \hline \hline
+        \endlastfoot
+        Count                  & 50              & 50                                \\
+        Mean                   & 8.04            & 104456.76                         \\
+        Median                 & 6               & 84000                             \\
+        Mode                   & 5, 6            & 79000, 109000, 119000             \\
+        Std Dev                & 6.11            & 105480.23                         \\
+        Variance               & 37.3            & 11126079540.23                    \\
+        Minimum                & 1               & 15765                             \\
+        Maximum                & 24              & 711636                            \\
+        \hline
+        \rowcolor{gray!50}
+        \textbf{Percentiles}:  &                 &                                   \\ \hline
+        \hspace{0.3cm} - 0th   & 1               & 15765                             \\
+        \hspace{0.3cm} - 25th  & 4               & 50000                             \\
+        \hspace{0.3cm} - 50th  & 6               & 84000                             \\
+        \hspace{0.3cm} - 75th  & 12              & 119000                            \\
+        \hspace{0.3cm} - 100th & 24              & 711636                            \\
+    \end{longtable}
+
     \begin{figure}[htbp]
         \centering
-        \includegraphics[scale=0.5]{../images/TotalProductsByShades.pdf}
+        \includegraphics[scale=0.4]{../images/TotalProductsByShades.pdf}
         \caption{Total Products Grouped by Shades}
         \label{Products_by_Shades}
     \end{figure}
-    
+
     \newgeometry{left=2cm,right=2cm, top=1cm, bottom=1.5cm}
-    
+
     \begin{landscape}
-    \begin{figure}[htbp]
-        \centering
-        \includegraphics[scale=0.55]{../images/TotalShadesByBrand.pdf}
-        \caption{Total Shades Grouped by Brands}
-        \label{Shades_by_Brands}
-    \end{figure}
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[scale=0.55]{../images/TotalShadesByBrand.pdf}
+            \caption{Total Shades Grouped by Brands}
+            \label{Shades_by_Brands}
+        \end{figure}
     \end{landscape}
 
     \begin{landscape}
@@ -459,18 +488,59 @@ In order to analyze the given data, libraries such as matplotlib, numpy, seaborn
             \label{Shades_by_Product}
         \end{figure}
     \end{landscape}
-    
+
     \begin{figure}[htbp]
         \centering
-        \includegraphics[scale=0.35]{../images/TotalProductsbyType.pdf}
+        \includegraphics[scale=0.6]{../images/TotalProductsbyType.pdf}
         \caption{Total Products Grouped by Type}
         \label{Products_by_Type}
+    \end{figure}
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.5]{../images/Brand_Frequency.pdf}
+        \caption{Frequency of Products by Brands}
+        \label{Products_by_Brands}
+    \end{figure}
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.6]{../images/KDE_Prices.pdf}
+        \caption{Product - Price Distribution - with KDE}
+        \label{KDE_Prices}
+    \end{figure}
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.6]{../images/Box_Prices.pdf}
+        \caption{Product - Price Distribution - BoxPlot}
+        \label{Box_Prices}
+    \end{figure}
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.6]{../images/KDE_Shades.pdf}
+        \caption{Product - Shades Distribution - with KDE}
+        \label{KDE_Shades}
     \end{figure}
     \restoregeometry
 
 \end{center}
+\restoregeometry
 
 \section{Inference}
+
+Most of the products are present in the price range of 15000 to 175000. Some of the products lie outside this range and can be seen as occasional peaks in the bar plot. The maximum price of any product is 711636 and the minimum is 15765. The mean price of all products is 104456 and the median is 84000. The data also shows a standard deviation of around 105480. \\
+
+\noindent The number of shades per product varies from 1 to 24, with the mean being 8.04 and the median being 6. Also, companies like Wardah, Maybelline, Makeover, L'oreal and Implora boast a large number of shades in their products while other companies do not have as much variety. \\
+
+\noindent Both variables have relatively high standard deviations compared to their means, indicating wide variability when it comes to prices and shade counts around their respective averages. \\
+
+\noindent Outliers are present in both variables, especially considering the large difference between the 75th percentile and the maximum values for both price and shades. \\
+
+\noindent Most of the lip products produced by these brands fall under the 'liquid' category, as evident from the donut chart. It accounts for 72 percent of the total products. From the remaining, 24 percent are 'stick' type and solid and crayon account for 2 percent each. \\
+
+\noindent Also, most companies only have one product present in the data, with some exceptions being Emina, L'oreal, Luxcrime, Madame Gie, Makeover, Maybelline and Wardah which have 2 or more products each. Emina, Wardah and Maybelline form the most popular brands in Indonesia closely followed by Madame Gie and L'oreal. \\
 
 % Bibliography
 \newpage

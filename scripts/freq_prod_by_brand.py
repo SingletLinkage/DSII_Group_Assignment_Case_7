@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.style as style
 import pandas as pd
 
-style.use('seaborn-darkgrid')
+style.use('seaborn-v0_8-darkgrid')
 
 data=pd.read_csv('source_files/actual_data_indonesia.csv')
 

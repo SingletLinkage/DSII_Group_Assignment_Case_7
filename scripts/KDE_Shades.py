@@ -1,18 +1,13 @@
-
-""" we can also create a distribution whidch shows the percentage of products by number of shades.
-then we can create a histogram to organize this. We will get some outliers and graphs.  
-Now using this, we can make a boxplot - which is basically classifying data into different quantiles """
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import matplotlib.style as style
-import seaborn as sns
 
 # Setting the style
-style.use('Solarize_Light2')
+style.use('seaborn-v0_8-darkgrid')
 
 # Load data
-data=pd.read_csv('source_files\\actual_data_indonesia.csv')
+data=pd.read_csv('source_files/actual_data_indonesia.csv')
 
 # Ensure 'Shades' is numeric for the purpose of this example
 shade_counts = data['Shades'].value_counts()
@@ -20,7 +15,7 @@ shade_counts = data['Shades'].value_counts()
 
 x = shade_counts.index
 y = shade_counts.values
-coefficients = np.polyfit(x, y, 2)  # Use a degree of 2 for a curve
+coefficients = np.polyfit(x, y, 4)  # Use a degree of 2 for a curve
 polynomial = np.poly1d(coefficients)
 ys = polynomial(x)
 
@@ -33,4 +28,4 @@ plt.title('Bar Plot of Lip Product Shades')
 plt.xlabel('Frequency')
 plt.ylabel('Shades')
 plt.grid(True)
-plt.show()
+plt.savefig('images/KDE_Shades.pdf')

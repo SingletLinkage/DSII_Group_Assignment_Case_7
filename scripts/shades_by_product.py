@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.style as style
 import os
 
-style.use('seaborn-darkgrid')
+style.use('seaborn-v0_8-darkgrid')
 
 # Create a DataFrame with data from Indonesian Lip Products
 database = pd.read_csv('./source_files/actual_data_indonesia.csv')

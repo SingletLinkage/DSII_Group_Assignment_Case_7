@@ -1,12 +1,11 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
 import matplotlib.style as style
 
 
 # Setting the style
-style.use('Solarize_Light2')
-data=pd.read_csv('source_files\\actual_data_indonesia.csv')
+style.use('seaborn-v0_8-darkgrid')
+data=pd.read_csv('source_files/actual_data_indonesia.csv')
 data['Price'] = data['Price'].astype(float)
 data['Shades'] = data['Shades'].astype(float)
 
@@ -68,3 +67,8 @@ cells[0, 1].set_text_props(weight='bold')
 plt.show()
 
 
+desc = data.describe([0.25, 0.5, 0.75]).T
+desc['Variance'] = desc['std']**2
+desc['Mode'] = [','.join(map(str, data['Shades'].mode())), ','.join(map(str, data['Price'].mode()))]
+
+print(desc.T.to_csv('source_files/descriptive_statistics.csv'))
