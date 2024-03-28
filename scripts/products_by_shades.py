@@ -12,6 +12,11 @@ database = pd.read_csv('./source_files/actual_data_indonesia.csv')
 shades = database['Shades'].unique()
 products = database.groupby('Shades').size()
 
+db = pd.DataFrame({'Frequency' : products,
+                   'Percentage' : round(products/sum(products)*100, 2)}, index=shades).sort_index()
+db['Cumulative Percentage'] = db['Percentage'].cumsum()
+db.to_csv('source_files/shades_freq_cumufreq.csv')
+
 fig, ax = plt.subplots(figsize=(13, 9))
 
 cmap = plt.cm.bwr
