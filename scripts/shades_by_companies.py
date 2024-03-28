@@ -36,7 +36,7 @@ ax.set_title('Number of Shades by Brand', fontsize=30)
 # Show color bar for reference
 sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
 sm.set_array([])
-plt.colorbar(sm)
+#plt.colorbar(sm)
 
 # Show the plot
 # plt.savefig(os.path.join(os.getcwd(), 'images', 'TotalShadesByCompany.pdf'), dpi=800)
