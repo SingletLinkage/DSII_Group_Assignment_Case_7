@@ -3,8 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.style as style
 import os
-
-style.use('seaborn-darkgrid')
+#print(style.available)
+# according to the version available, use either seaborn-darkgrid or seaborn-v0_8-daarkgrid
+style.use('seaborn-v0_8-darkgrid')
 
 # Create a DataFrame with data from Indonesian Lip Products
 database = pd.read_csv('./source_files/actual_data_indonesia.csv')
@@ -38,8 +39,8 @@ ax.set_title('Number of Products by Number of Available Shades', fontsize=30)
 # Show color bar for reference
 sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
 sm.set_array([])
-plt.colorbar(sm, label='Count of Shades')
+#plt.colorbar(sm, label='Count of Shades')
 
 # Show the plot
-plt.savefig(os.path.join(os.getcwd(), 'images', 'TotalProductsByShades.pdf'))
-# plt.show()
+#plt.savefig(os.path.join(os.getcwd(), 'images', 'TotalProductsByShades.pdf'))
+plt.show()
