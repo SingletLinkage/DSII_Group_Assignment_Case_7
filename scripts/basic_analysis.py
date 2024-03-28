@@ -7,7 +7,7 @@ import seaborn as sns  # Import seaborn for KDE
 import matplotlib.style as style
 
 # Setting the style
-style.use('Solarize_Light2')
+style.use('seaborn-v0_8-darkgrid')
 
 data = pd.read_csv('source_files\\actual_data_indonesia.csv')
 

@@ -9,7 +9,7 @@ import matplotlib.style as style
 import seaborn as sns
 
 # Setting the style
-style.use('Solarize_Light2')
+style.use('seaborn-v0_8-darkgrid')
 
 # Load data
 data=pd.read_csv('source_files\\actual_data_indonesia.csv')
