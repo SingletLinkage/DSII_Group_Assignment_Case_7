@@ -27,7 +27,7 @@ ax.barh(products, shades, color=colors)
 
 # Add labels and title
 ax.set_xlabel('Number of Shades', fontsize=20)
-ax.set_ylabel('Brands', fontsize=20)
+ax.set_ylabel('Products', fontsize=20)
 ax.set_title('Number of Shades by Products', fontsize=30)
 
 # # Show color bar for reference
