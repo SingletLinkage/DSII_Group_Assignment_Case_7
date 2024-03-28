@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-data = pd.read_csv("source_files\\actual_data_indonesia.csv")
+
+data = pd.read_csv("source_files/actual_data_indonesia.csv")
 print(data)
 
 types = {}
@@ -28,13 +28,21 @@ percentage = []
 for i in number :
     percentage.append(i/tot)
 
+fig, ax = plt.subplots()
 
+# Outer circle
+pie, labels, autotexts = ax.pie(percentage, labels=type_of_prod, autopct='%1.0f%%', startangle=140, labeldistance=1.05)
+ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle
 
-# Data to plot
-explode = (0.1, 0.1, 0.1, 0.1)  
+for label in labels:
+    label.set_fontsize(15)
+for autotext in autotexts:
+    autotext.set_fontsize(15)
 
-fig = plt.figure()
-plt.pie(percentage, explode=explode, labels=type_of_prod, autopct='%1.1f%%', startangle=140)
+# Draw a white circle at the center to make it look like a donut
+center_circle = plt.Circle((0, 0), 0.7, color='white')
+ax.add_artist(center_circle)
+
+plt.title('Percentage by Type', fontsize=25)
+
 plt.show()
-plt.title('Percentage by brand')
-
