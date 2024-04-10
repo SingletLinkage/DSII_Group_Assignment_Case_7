@@ -5,7 +5,8 @@ import pandas as pd
 style.use('seaborn-v0_8-darkgrid')
 
 
-data=pd.read_csv('source_files/actual_data_indonesia.csv')
+# data=pd.read_csv('source_files/actual_data_indonesia.csv')
+data=pd.read_csv('source_files/india_data.csv')
 
 y = data['Brand'].value_counts(sort=False)
 x = data['Brand'].unique()
@@ -16,7 +17,4 @@ plt.barh(x, y, color='aqua', edgecolor='black')
 plt.xlabel('Frequency', fontsize=15)
 plt.ylabel('Brands', fontsize=15)
 plt.title('Frequency of Lip Product by Brands', fontsize=20)
-plt.savefig('images/Brand_Frequency.pdf')
-
-
-
+plt.savefig('images/India-graphs/Brand_Frequency.pdf')

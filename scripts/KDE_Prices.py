@@ -8,7 +8,9 @@ import matplotlib.style as style
 # Setting the style
 style.use('seaborn-v0_8-darkgrid')
 
-data = pd.read_csv('source_files/actual_data_indonesia.csv')
+# data = pd.read_csv('source_files/actual_data_indonesia.csv')
+data=pd.read_csv('source_files/india_data.csv')
+
 
 # Plot histogram with KDE line (black)
 plt.figure(figsize=(10, 6))
@@ -19,7 +21,7 @@ plt.xlabel('Price')
 plt.xticks(rotation=90)
 plt.ylabel('Frequency')
 plt.grid(True)
-plt.savefig('images/KDE_Prices.pdf')
+plt.savefig('images/India-graphs/KDE_Prices.pdf')
 
 
 data['Price'] = data['Price'].astype(float)
@@ -47,4 +49,4 @@ plt.legend()  # Show legend
 plt.grid(True, axis='y')  # Show gridlines along the y-axis
 plt.xticks([])  # Remove x-ticks
 
-plt.savefig('images/Box_Prices.pdf')
+plt.savefig('images/India-graphs/Box_Prices.pdf')

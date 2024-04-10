@@ -8,7 +8,9 @@ import os
 style.use('seaborn-v0_8-darkgrid')
 
 # Create a DataFrame with data from Indonesian Lip Products
-database = pd.read_csv('./source_files/actual_data_indonesia.csv')
+# database = pd.read_csv('./source_files/actual_data_indonesia.csv')
+database =pd.read_csv('source_files/india_data.csv')
+
 
 shades = database['Shades'].unique()
 products = database.groupby('Shades').size()
@@ -16,7 +18,7 @@ products = database.groupby('Shades').size()
 db = pd.DataFrame({'Frequency' : products,
                    'Percentage' : round(products/sum(products)*100, 2)}, index=shades).sort_index()
 db['Cumulative Percentage'] = db['Percentage'].cumsum()
-db.to_csv('source_files/shades_freq_cumufreq.csv')
+db.to_csv('source_files/india_shades_freq_cumufreq.csv')
 
 fig, ax = plt.subplots(figsize=(13, 9))
 
@@ -42,5 +44,5 @@ sm.set_array([])
 #plt.colorbar(sm, label='Count of Shades')
 
 # Show the plot
-#plt.savefig(os.path.join(os.getcwd(), 'images', 'TotalProductsByShades.pdf'))
-plt.show()
+plt.savefig(os.path.join(os.getcwd(), 'images', 'India-graphs', 'TotalProductsByShades.pdf'))
+# plt.show()

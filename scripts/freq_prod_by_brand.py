@@ -4,7 +4,9 @@ import pandas as pd
 
 style.use('seaborn-v0_8-darkgrid')
 
-data=pd.read_csv('source_files/actual_data_indonesia.csv')
+# data=pd.read_csv('source_files/actual_data_indonesia.csv')
+data=pd.read_csv('source_files/india_data.csv')
+
 
 result_db = pd.DataFrame({
         'Frequency' : data['Brand'].value_counts(sort=False),
@@ -13,7 +15,7 @@ result_db = pd.DataFrame({
 }, index=data['Brand'].unique())
 
 # print(result_db.to_string())
-result_db.to_csv('source_files/brand_freq_cumufreq.csv')
+result_db.to_csv('source_files/india_brand_freq_cumufreq.csv')
 
 x = data['Brand'].unique()
 y = data['Brand'].value_counts(sort=False)
@@ -26,4 +28,4 @@ plt.ylabel('Frequency')
 plt.title('Frequency of Products by Brand', fontsize=30)
 
 # plt.show()
-plt.savefig('images/brand_freq.pdf')
+plt.savefig('images/India-graphs/brand_freq.pdf')

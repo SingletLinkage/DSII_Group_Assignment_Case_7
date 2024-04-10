@@ -7,7 +7,9 @@ import os
 style.use('seaborn-v0_8-darkgrid')
 
 # Create a DataFrame with data from Indonesian Lip Products
-database = pd.read_csv('./source_files/actual_data_indonesia.csv')
+# database = pd.read_csv('./source_files/actual_data_indonesia.csv')
+database=pd.read_csv('source_files/india_data.csv')
+
 
 products = database['Lip Product']
 shades = database['Shades']
@@ -29,6 +31,7 @@ ax.barh(products, shades, color=colors)
 ax.set_xlabel('Number of Shades', fontsize=20)
 ax.set_ylabel('Products', fontsize=20)
 ax.set_title('Number of Shades by Products', fontsize=30)
+ax.set_yticks(range(0, len(products)), products, fontsize=7)
 
 # # Show color bar for reference
 # sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
@@ -36,4 +39,4 @@ ax.set_title('Number of Shades by Products', fontsize=30)
 # plt.colorbar(sm, label='Count of Shades')
 
 # Show the plot
-plt.savefig(os.path.join(os.getcwd(), 'images', 'TotalShadesByProduct.pdf'), dpi=800)
+plt.savefig(os.path.join(os.getcwd(), 'images', 'India-graphs', 'TotalShadesByProduct.pdf'), dpi=800)
